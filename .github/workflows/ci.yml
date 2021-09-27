@@ -1,0 +1,28 @@
+name: Pipeline para o admin
+# This workflow is triggered on pushes to the repository.
+on:
+  push:
+    branches:
+      - master
+
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Testes JEST
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: NPM Install
+        run: |
+          npm install
+
+      - name: Tests
+        run: |
+          npm test
