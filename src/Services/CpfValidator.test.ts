@@ -1,4 +1,4 @@
-import CpfValidatror from "../../src/Services/CpfValidator";
+import CpfValidatror from "./CpfValidator";
 
 test("CPF nulo", () => {
     let service = new CpfValidatror();
