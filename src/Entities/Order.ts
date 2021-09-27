@@ -9,11 +9,6 @@ export default class Order {
     coupon?: DiscountCoupon;
 
     constructor(cpf: Cpf, items: Item[], coupon?: DiscountCoupon) {
-
-        if (items.length === 0) {
-            throw new Error('You need to add at least one item!');
-        }
-
         this.cpf = cpf;
         this.items = items;
         this.coupon = coupon;

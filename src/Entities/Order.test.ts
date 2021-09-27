@@ -27,6 +27,7 @@ test("Valid Order", () => {
     let order = new Order(cpf, items);
     expect(order).toBeInstanceOf(Order);
     expect(order.totalItems()).toBe(3);
+    expect(order.total()).toBe(60);
 });
 
 

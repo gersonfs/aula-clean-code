@@ -34,14 +34,10 @@ export default class CpfValidatror {
 
         rest = (d1 % 11);
 
-        dg1 = (rest < 2) ? dg1 = 0 : 11 - rest;
+        dg1 = (rest < 2) ? 0 : 11 - rest;
         d2 += 2 * dg1;
         rest = (d2 % 11);
-        if (rest < 2) {
-            dg2 = 0;
-        } else {
-            dg2 = 11 - rest;
-        }
+        dg2 = (rest < 2) ? 0 : 11 - rest;
 
         let nDigVerific = cpf.substring(cpf.length - 2, cpf.length);
         nDigResult = "" + dg1 + "" + dg2;
